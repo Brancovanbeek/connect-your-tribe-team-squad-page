@@ -1,37 +1,56 @@
-{% render 'partials/head.liquid'
-  , title: 'Front page' %}
+{% render 'partials/head.liquid', title: 'Squad page' %}
 
-{% include 'partials/navbar.liquid'
-  , title: 'Frontend Design & Development' %}
+{% assign squad_filter = request.params.squad | default: 'iedereen' %}
 
-{% include 'partials/hero.liquid'
-  , 
- image1: "images/branco.png"
- image1_alt: "Branco"
-  ,
- image2: "images/saif.png"
- image2_alt: "Saif"
-  ,
- image3: "images/fatima.png"
- image3_alt: "Fatima"
-  , 
- title: "Team Storm"
- description: "Wij zijn een gepassioneerd team van designers en developers die samenwerken om geweldige projecten te realiseren."
- button_text: "Leer Ons Kennen" 
- button_url: "#"
-%}
+<main>
+  <h1>Choose your character</h1>
 
-{% include "partials/squad-selector.liquid" %}
+  <form action="/search" method="GET">
+      <label for="character-search">Search your character from {{ squad_filter | capitalize }}</label>
+      <input type="text" id="character-search" name="character" placeholder="John Pork" required>
+  </form>
 
+  {% comment %} Dit moet in de gta wapen cirkel om je squad te kiezen
+  <a href="?squad=1g">Squad 1G</a>
+  <a href="?squad=1h">Squad 1H</a>
+  <a href="?squad=iedereen">Iedereen</a> {% endcomment %}
 
-<h2>Students</h2>
-<ul>
+  <section class="character-card-grid">
   {% for person in persons %}
-    <li>
-      <a href="/student/{{ person.id }}">{{ person.name }}</a>
-    </li>
+    {% if squad_filter == 'iedereen' or person.squad == squad_filter %} 
+      {% comment %} Als squad_filter gelijk is aan "iedereen", toon dan alle personen uit de tribe. OF als person.squad overeenkomt met de squad uit de URL, toon die personen. {% endcomment %}
+      <section class="character-card-flip">
+
+        <section class="flip-card-front">
+          <img class="profile-photo" src="images/img/{{person.id}}.jpg" alt="{{person.name}}">
+        
+          <section class="info">
+            <h2>{{ person.name }}</h2>
+            <form action="/register" method="POST">
+              <label for="username">Create your username</label>
+              <input type="text" id="username" name="username" placeholder="Enter your username" value="{{ username | escape }}" required>
+            </form>
+
+            <h2>Level {{person.id}}</h2>
+          </section>
+        </section>
+
+        <section class="flip-card-back">
+          <section class="skills">
+            <h2>Skills:</h2>
+            <ul>
+              <li>{{ person.fav_property | escape }}</li>
+              <li>{{ person.fav_tag | escape }}</li>
+              <li>{{ person.fav_attribute | escape }}</li>
+              <li>{{ person.fav_feature | escape }}</li>
+            </ul>
+          </section>
+        </section>
+
+      </section>
+    {% endif %}
   {% endfor %}
-</ul>
+  </section>
+</main>
 
-
-{% render 'partials/foot.liquid' %}
+{% render 'partials/foot.liquid', squads: squads %}
