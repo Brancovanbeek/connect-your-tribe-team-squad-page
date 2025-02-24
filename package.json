@@ -1,24 +1,32 @@
 {
-  "name": "connect-your-tribe-team-squad-page",
+  "name": "connect-your-tribe-squad-page",
   "version": "1.0.0",
-  "description": "Ontwerp en maak samen met je team een website met NodeJS, Express, JSON en Liquid",
+  "description": "Redesign met je squad een squadpagina op basis van een bestaande API.",
   "main": "server.js",
   "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fdnd-task/connect-your-tribe-team-squad-page.git"
+    "url": "git+https://github.com/fdnd-task/connect-your-tribe-squad-page.git"
   },
-  "author": "",
+  "keywords": [
+    "node",
+    "express",
+    "liquidjs"
+  ],
+  "author": "J.P. Sturkenboom <j.p.sturkenboom@hva.nl>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fdnd-task/connect-your-tribe-team-squad-page/issues"
+    "url": "https://github.com/fdnd-task/connect-your-tribe-squad-page/issues"
   },
-  "homepage": "https://github.com/fdnd-task/connect-your-tribe-team-squad-page#readme",
+  "homepage": "https://github.com/fdnd-task/connect-your-tribe-squad-page#readme",
   "dependencies": {
     "express": "^5.0.1",
-    "liquidjs": "^10.21.0"
+    "liquidjs": "^10.20.2"
   }
 }

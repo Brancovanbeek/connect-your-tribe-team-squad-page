@@ -1,22 +1,37 @@
-<h1>Zet 'm op team {{ teamName }}!</h1>
+{% render 'partials/head.liquid'
+  , title: 'Front page' %}
 
-<h2>Huidige berichten</h2>
+{% include 'partials/navbar.liquid'
+  , title: 'Frontend Design & Development' %}
 
-{% for message in messages %}
-<p>{{ message.from }}: {{ message.text }} @{{ message.created | date: '%d-%m-%Y %H:%M' }}</p>
-{% else %}
-<p>Er zijn nog geen berichten voor dit team.</p>
-{% endfor %}
+{% include 'partials/hero.liquid'
+  , 
+ image1: "images/branco.png"
+ image1_alt: "Branco"
+  ,
+ image2: "images/saif.png"
+ image2_alt: "Saif"
+  ,
+ image3: "images/fatima.png"
+ image3_alt: "Fatima"
+  , 
+ title: "Team Storm"
+ description: "Wij zijn een gepassioneerd team van designers en developers die samenwerken om geweldige projecten te realiseren."
+ button_text: "Leer Ons Kennen" 
+ button_url: "#"
+%}
 
-<h2>Voeg een bericht toe</h2>
-<form method="post" action="/">
-  <label>
-    Naam:
-    <input type="text" name="from" required>
-  </label>
-  <label>
-    Bericht:
-    <textarea name="text" required></textarea>
-  </label>
-  <button type="submit">Verstuur</button>
-</form>
+{% include "partials/squad-selector.liquid" %}
+
+
+<h2>Students</h2>
+<ul>
+  {% for person in persons %}
+    <li>
+      <a href="/student/{{ person.id }}">{{ person.name }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+
+{% render 'partials/foot.liquid' %}

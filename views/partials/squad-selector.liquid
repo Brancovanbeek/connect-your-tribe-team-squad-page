@@ -1,0 +1,14 @@
+<section class="squad-selector">
+  <h2>Choose your squad</h2>
+  <div class="squads">
+    <ul class="squad">
+      {% for squad in squads %}
+        <li>
+          <a href="/squad/{{ squad.name }}">
+            Squad {{ squad.name }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

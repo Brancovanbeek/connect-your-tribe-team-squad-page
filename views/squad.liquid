@@ -1,0 +1,16 @@
+{% render 'partials/head.liquid'
+  , title: "Squad page" %}
+
+<a href="/">Back</a>
+
+<h2>Leden van Squad {{ squadName }}</h2>
+
+<input type="text" id="searchInput" placeholder="Zoek leden..." onkeyup="filterMembers()">
+
+<ul id="membersList">
+  {% for person in person %}
+    <li class="member-item">
+      <a href="/student/{{ person.id }}">{{ person.name }}</a>
+    </li>
+  {% endfor %}
+</ul>

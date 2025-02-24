@@ -1,0 +1,25 @@
+<section class="hero">
+  <div class="hero-content">
+    <div class="skewed-bar-top"></div>
+    <div class="hero-images">
+      <img
+        class="hero-img"
+        src="{{ image1 | url }}"
+        alt="{{ image1_alt }}">
+      <img
+        class="hero-img"
+        src="{{ image2 | url }}"
+        alt="{{ image2_alt }}">
+      <img
+        class="hero-img"
+        src="{{ image3 | url }}"
+        alt="{{ image3_alt }}">
+    </div>
+    <div class="hero-detail">
+      <h1>{{ title }}</h1>
+      <p>{{ description }}</p>
+      <a href="{{ button_url }}" class="cta-button">{{ button_text }}</a>
+    </div>
+    <div class="skewed-bar-bottom"></div>
+  </div>
+</section>
