@@ -16,6 +16,8 @@
 /* Background Styling */
 body {
   font-family: var(--chalet), var(--open-sans);
+  background: linear-gradient(#000000,#4c466a,#FFAB00);
+  text-align: center;
   margin: 0;
   padding: 0;
 
@@ -37,18 +39,17 @@ body {
   --bold: 600;
 
   /* Primary Colors */
-  --color-orange-primary: #ffb100;
-  --color-orange-secondary: #ffaa00;
-  --color-red-primary: #ff3d3d;
+  --primary-background-color:#000000 ;
+  --primary-text-color: #000000;
+  --logo-button-color:#FFAB00; 
+
+  /* Secundary Colors */
+  --secundary-background-color: #4c466a;
+  --secondary-bacground-color: #FFFFFF;
+  --secondary-text-color: #FFFFFF;
 
   /* Accent Colors */
-  --color-black: #000000;
-  --color-white: #ffffff;
-  --color-dark-red: #b30000;
-  --color-neon-green: #32cd32;
-  --color-cyan: #00ffff;
-  --color-gold: #ffd700;
-  --color-blue: #0074ff;
+  --accent-background-color: #db9a54;
 }
 
 /* Navbar */
