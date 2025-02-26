@@ -104,8 +104,6 @@ app.get("/squad/:squadName", async function (request, response) {
   // En haal daarvan de JSON op
   const personDetailResponseJSON = await personDetailResponse.json();
 
-  console.log(squadName);
-
   // Render squad.liquid uit de views map en geef de opgehaalde data mee als variable, genaamd person
   // Geef ook de eerder opgehaalde squad data mee aan de view
   // Ook de squadName word meegegeven

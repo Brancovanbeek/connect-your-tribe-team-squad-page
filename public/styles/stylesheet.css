@@ -16,7 +16,7 @@
 /* Background Styling */
 body {
   font-family: var(--chalet), var(--open-sans);
-  background: linear-gradient(#000000,#4c466a,#FFAB00);
+  background: linear-gradient(#000000, #4c466a, #ffab00);
   text-align: center;
   margin: 0;
   padding: 0;
@@ -39,14 +39,14 @@ body {
   --bold: 600;
 
   /* Primary Colors */
-  --primary-background-color:#000000 ;
+  --primary-background-color: #000000;
   --primary-text-color: #000000;
-  --logo-button-color:#FFAB00;
+  --logo-button-color: #ffab00;
 
   /* Secundary Colors */
   --secundary-background-color: #4c466a;
-  --secondary-bacground-color: #FFFFFF;
-  --secondary-text-color: #FFFFFF;
+  --secondary-bacground-color: #ffffff;
+  --secondary-text-color: #ffffff;
 
   /* Accent Colors */
   --accent-background-color: #db9a54;
@@ -271,20 +271,23 @@ body {
 /* Squad selector */
 .squad-selector {
   height: 100%;
+
+  .weapon-wheel-container {
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    position: relative;
+    margin: 50px auto;
+
+    .squad-selector-title {
+      color: var(--color-white);
+    }
+
+    
+  }
 }
 
-.squad-selector-title {
-  color: var(--color-white);
-}
-
-.weapon-wheel-container {
-  width: 100%;
-  max-width: 700px;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  position: relative;
-  margin: 50px auto;
-}
 .weapon-wheel {
   width: 100%;
   height: auto;
@@ -332,4 +335,3 @@ body {
   transition: all 0.2s ease-in-out;
   stroke-width: 0;
 }
-
