@@ -5,7 +5,7 @@
 
   <form class="character-search" action="/search" method="GET">
       <label for="character-search">Search your character from {{ squadName | uppercase }}</label>
-      <input type="text" id="character-search" name="character" placeholder="John Pork" required>
+      <input type="text" id="searchInput" name="character" placeholder="John Pork" onkeyup="filterMembers()" required>
   </form>
 
   <section class="character-card-grid">
