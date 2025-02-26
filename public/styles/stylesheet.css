@@ -41,7 +41,7 @@ body {
   /* Primary Colors */
   --primary-background-color:#000000 ;
   --primary-text-color: #000000;
-  --logo-button-color:#FFAB00; 
+  --logo-button-color:#FFAB00;
 
   /* Secundary Colors */
   --secundary-background-color: #4c466a;
@@ -268,7 +268,68 @@ body {
   }
 }
 
-/* Squad-selector */
+/* Squad selector */
 .squad-selector {
-  margin: 0 auto;
+  height: 100%;
 }
+
+.squad-selector-title {
+  color: var(--color-white);
+}
+
+.weapon-wheel-container {
+  width: 100%;
+  max-width: 700px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  position: relative;
+  margin: 50px auto;
+}
+.weapon-wheel {
+  width: 100%;
+  height: auto;
+  transform: rotate(22deg);
+}
+
+.weapon-wheel > text {
+  font-weight: 700;
+  font-size: 1.5em;
+  stroke: black;
+}
+
+.weapon-wheel text,
+.weapon-wheel .weapon text,
+.weapon-wheel .weapon image {
+  transform: rotate(-22deg);
+}
+
+.weapon-wheel .weapon path {
+  stroke: rgba(0, 0, 0, 0.3);
+  stroke-width: 5px;
+  stroke-dasharray: 235.5 440;
+  transform-origin: center center;
+  transform: scale(0.98);
+  transform-box: fill-box;
+}
+
+.weapon-wheel .weapon text {
+  font-weight: 700;
+  stroke: black;
+}
+
+.weapon-wheel .weapon.active-weapon path {
+  stroke: rgba(82, 149, 177, 1);
+  stroke-width: 10px;
+  stroke-dasharray: 235.5 440;
+}
+
+.weapon-wheel .weapon:hover {
+  cursor: pointer;
+}
+
+.weapon-wheel .weapon:hover path {
+  fill: white;
+  transition: all 0.2s ease-in-out;
+  stroke-width: 0;
+}
+
