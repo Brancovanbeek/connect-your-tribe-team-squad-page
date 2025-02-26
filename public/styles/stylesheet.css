@@ -283,55 +283,49 @@ body {
     .squad-selector-title {
       color: var(--color-white);
     }
+    .weapon-wheel {
+      width: 100%;
+      height: auto;
+      transform: rotate(22deg);
 
-    
+      > text {
+        font-weight: 700;
+        font-size: 1.5em;
+        stroke: black;
+      }
+
+      .weapon {
+        path {
+          stroke: rgba(0, 0, 0, 0.3);
+          stroke-width: 5px;
+          stroke-dasharray: 235.5 440;
+          transform-origin: center center;
+          transform: scale(0.98);
+          transform-box: fill-box;
+        }
+
+        text,
+        image {
+          font-weight: 700;
+          stroke: black;
+          transform: rotate(-22deg);
+        }
+        &:hover {
+          cursor: pointer;
+
+          path {
+            fill: white;
+            transition: all 0.2s ease-in-out;
+            stroke-width: 0;
+          }
+        }
+      }
+
+      .active-weapon path {
+        stroke: rgba(82, 149, 177, 1);
+        stroke-width: 10px;
+        stroke-dasharray: 235.5 440;
+      }
+    }
   }
-}
-
-.weapon-wheel {
-  width: 100%;
-  height: auto;
-  transform: rotate(22deg);
-}
-
-.weapon-wheel > text {
-  font-weight: 700;
-  font-size: 1.5em;
-  stroke: black;
-}
-
-.weapon-wheel text,
-.weapon-wheel .weapon text,
-.weapon-wheel .weapon image {
-  transform: rotate(-22deg);
-}
-
-.weapon-wheel .weapon path {
-  stroke: rgba(0, 0, 0, 0.3);
-  stroke-width: 5px;
-  stroke-dasharray: 235.5 440;
-  transform-origin: center center;
-  transform: scale(0.98);
-  transform-box: fill-box;
-}
-
-.weapon-wheel .weapon text {
-  font-weight: 700;
-  stroke: black;
-}
-
-.weapon-wheel .weapon.active-weapon path {
-  stroke: rgba(82, 149, 177, 1);
-  stroke-width: 10px;
-  stroke-dasharray: 235.5 440;
-}
-
-.weapon-wheel .weapon:hover {
-  cursor: pointer;
-}
-
-.weapon-wheel .weapon:hover path {
-  fill: white;
-  transition: all 0.2s ease-in-out;
-  stroke-width: 0;
 }
