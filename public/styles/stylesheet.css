@@ -13,6 +13,10 @@
   src: url("../fonts/Pricedown.otf") format("opentype");
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 /* Background Styling */
 body {
   font-family: var(--chalet), var(--open-sans);
@@ -50,6 +54,10 @@ body {
 
   /* Accent Colors */
   --accent-background-color: #db9a54;
+}
+
+button{
+  cursor: pointer;
 }
 
 /* Navbar */
@@ -157,6 +165,16 @@ body {
       background-color: transparent;
     }
   }
+}
+
+#squad-selector-link{
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#squad-selector-link:hover{
+  color: rgb(178, 178, 178);
 }
 
 /* Hero section */
@@ -271,6 +289,8 @@ body {
 /* Squad selector */
 .squad-selector {
   height: 100%;
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
   .weapon-wheel-container {
     width: 100%;
@@ -321,6 +341,68 @@ body {
         }
       }
 
+=======
+=======
+>>>>>>> Stashed changes
+<<<<<<< HEAD
+  position: relative;
+}
+=======
+>>>>>>> c9674d765a63ece6b78ddae740943beb173a48be
+
+  .weapon-wheel-container {
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    position: relative;
+    margin: 50px auto;
+
+    .squad-selector-title {
+      color: var(--color-white);
+    }
+    .weapon-wheel {
+      width: 100%;
+      height: auto;
+      transform: rotate(22deg);
+
+      > text {
+        font-weight: 700;
+        font-size: 1.5em;
+        stroke: black;
+      }
+
+      .weapon {
+        path {
+          stroke: rgba(0, 0, 0, 0.3);
+          stroke-width: 5px;
+          stroke-dasharray: 235.5 440;
+          transform-origin: center center;
+          transform: scale(0.98);
+          transform-box: fill-box;
+        }
+
+        text,
+        image {
+          font-weight: 700;
+          stroke: black;
+          transform: rotate(-22deg);
+        }
+        &:hover {
+          cursor: pointer;
+
+          path {
+            fill: white;
+            transition: all 0.2s ease-in-out;
+            stroke-width: 0;
+          }
+        }
+      }
+
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
       .active-weapon path {
         stroke: rgba(82, 149, 177, 1);
         stroke-width: 10px;
@@ -329,3 +411,48 @@ body {
     }
   }
 }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> Stashed changes
+<<<<<<< HEAD
+
+.weapon-wheel .weapon:hover {
+  cursor: pointer;
+}
+
+.weapon-wheel .weapon:hover path {
+  fill: white;
+  transition: all 0.2s ease-in-out;
+  stroke-width: 0;
+}
+
+
+/* scroll */
+.scroll-btn {
+  position: absolute;           
+  bottom: 50px;            
+  right: 50px;              
+  background-color: #ffffff; 
+  border-radius: 50%;       
+  padding: 10px;             
+  cursor: pointer;     
+}
+
+.scroll-arrow-svg {
+  width: 40px;              
+  height: 40px;             
+}               
+
+.scroll-btn:hover {
+  background-color: #f1f1f1;
+}
+
+
+=======
+>>>>>>> c9674d765a63ece6b78ddae740943beb173a48be
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
