@@ -114,6 +114,23 @@ app.get("/squad/:squadName", async function (request, response) {
   });
 });
 
+// Route om je tribe te tonen
+app.get("/tribe", async function (request, response) {
+  // Haal de juiste persoon uit de WHOIS API op
+  const personDetailResponse = await fetch(
+    `${API_BASE_URL}?sort=name&fields=*,squads.squad_id.name,squads.squad_id.cohort&filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"cohort":"2425"}}}]}`
+  );
+  // En haal daarvan de JSON op
+  const personDetailResponseJSON = await personDetailResponse.json();
+
+  // Render student.liquid uit de views map en geef de opgehaalde data mee als variable, genaamd person
+  // Geef ook de eerder opgehaalde squad data mee aan de view
+  response.render("squad.liquid", {
+    persons: personDetailResponseJSON.data,
+    squads: squadResponseJSON.data,
+  });
+});
+
 // Stel het poortnummer in waar express op moet gaan luisteren
 app.set("port", process.env.PORT || 8000);
 
