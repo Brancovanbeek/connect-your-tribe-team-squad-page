@@ -7,3 +7,5 @@ function filterMembers() {
       item.style.display = name.includes(searchInput) ? '' : 'none';
     });
 }
+
+
