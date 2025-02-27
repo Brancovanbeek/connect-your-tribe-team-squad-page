@@ -353,7 +353,6 @@ button{
   }
 }
 
-
 .weapon-wheel .weapon:hover {
   cursor: pointer;
 }
@@ -364,17 +363,29 @@ button{
   stroke-width: 0;
 }
 
-
 /* scroll */
 .scroll-btn {
   position: absolute;           
-  bottom: 50px;            
+  bottom: 0;            
   right: 50px;              
   background-color: #ffffff; 
   border-radius: 50%;       
   padding: 10px;             
-  cursor: pointer;     
+  cursor: pointer;
+  display: none;   
+  
+  @media (min-width: 650px) {
+    display: block;
+  }
 }
+
+#squad-selector-link{
+  display: none;
+  @media (min-width: 650px) {
+    display: block;
+  }
+}
+
 
 .scroll-arrow-svg {
   width: 40px;              
