@@ -16,9 +16,10 @@
           <img class="profile-photo" src="/images/img/{{person.id}}.jpg" alt="{{person.name}}">
           <section class="info">
             <h2>{{ person.name }}</h2>
-            <form action="/register" method="POST">
+            <form id="registerForm">
               <label for="username">Create your username</label>
               <input type="text" id="username" name="username" placeholder="Enter your username" value="{{ username | escape }}" required>
+              <p id="outputText"></p>
             </form>
             <h2>Level {{person.id}}</h2>
           </section>
