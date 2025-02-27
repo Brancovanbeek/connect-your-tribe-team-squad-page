@@ -19,3 +19,18 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".flipcard").forEach((flipCard) => {
+      const usernameInput = flipCard.querySelector("input[name='username']");
+      
+      // Voorkom dat de flipcard draait als er op de input wordt geklikt
+      usernameInput.addEventListener("click", (event) => {
+          event.stopPropagation();  // Zorgt ervoor dat de klik op de input de flip niet triggert
+      });
+  });
+});
+
+
+
+
