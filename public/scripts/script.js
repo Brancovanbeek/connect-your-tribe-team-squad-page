@@ -7,3 +7,15 @@ function filterMembers() {
       item.style.display = name.includes(searchInput) ? '' : 'none';
     });
 }
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const flipcards = document.querySelectorAll(".flipcard");
+
+  flipcards.forEach(card => {
+      card.addEventListener("click", function () {
+          card.classList.toggle("is-flipped");
+      });
+  });
+});
