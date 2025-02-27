@@ -104,8 +104,6 @@ app.get("/squad/:squadName", async function (request, response) {
   // En haal daarvan de JSON op
   const personDetailResponseJSON = await personDetailResponse.json();
 
-  console.log(squadName);
-
   // Render squad.liquid uit de views map en geef de opgehaalde data mee als variable, genaamd person
   // Geef ook de eerder opgehaalde squad data mee aan de view
   // Ook de squadName word meegegeven
@@ -113,6 +111,23 @@ app.get("/squad/:squadName", async function (request, response) {
     persons: personDetailResponseJSON.data,
     squads: squadResponseJSON.data,
     squadName: squadName,
+  });
+});
+
+// Route om je tribe te tonen
+app.get("/tribe", async function (request, response) {
+  // Haal de juiste persoon uit de WHOIS API op
+  const personDetailResponse = await fetch(
+    `${API_BASE_URL}?sort=name&fields=*,squads.squad_id.name,squads.squad_id.cohort&filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"cohort":"2425"}}}]}`
+  );
+  // En haal daarvan de JSON op
+  const personDetailResponseJSON = await personDetailResponse.json();
+
+  // Render student.liquid uit de views map en geef de opgehaalde data mee als variable, genaamd person
+  // Geef ook de eerder opgehaalde squad data mee aan de view
+  response.render("squad.liquid", {
+    persons: personDetailResponseJSON.data,
+    squads: squadResponseJSON.data,
   });
 });
 

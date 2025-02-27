@@ -13,10 +13,14 @@
   src: url("../fonts/Pricedown.otf") format("opentype");
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 /* Background Styling */
 body {
   font-family: var(--chalet), var(--open-sans);
-  background: linear-gradient(#000000,#4c466a,#FFAB00);
+  background: linear-gradient(#000000, #4c466a, #ffab00);
   text-align: center;
   margin: 0;
   padding: 0;
@@ -39,17 +43,21 @@ body {
   --bold: 600;
 
   /* Primary Colors */
-  --primary-background-color:#000000 ;
+  --primary-background-color: #000000;
   --primary-text-color: #000000;
-  --logo-button-color:#FFAB00;
+  --logo-button-color: #ffab00;
 
   /* Secundary Colors */
   --secundary-background-color: #4c466a;
-  --secondary-bacground-color: #FFFFFF;
-  --secondary-text-color: #FFFFFF;
+  --secondary-bacground-color: #ffffff;
+  --secondary-text-color: #ffffff;
 
   /* Accent Colors */
   --accent-background-color: #db9a54;
+}
+
+button{
+  cursor: pointer;
 }
 
 /* Navbar */
@@ -157,6 +165,16 @@ body {
       background-color: transparent;
     }
   }
+}
+
+#squad-selector-link{
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#squad-selector-link:hover{
+  color: rgb(178, 178, 178);
 }
 
 /* Hero section */
@@ -275,57 +293,66 @@ body {
 /* Squad selector */
 .squad-selector {
   height: 100%;
-}
-
-.squad-selector-title {
-  color: var(--color-white);
-}
-
-.weapon-wheel-container {
-  width: 100%;
-  max-width: 700px;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
   position: relative;
-  margin: 50px auto;
-}
-.weapon-wheel {
-  width: 100%;
-  height: auto;
-  transform: rotate(22deg);
+
+  .weapon-wheel-container {
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    position: relative;
+    margin: 50px auto;
+
+    .squad-selector-title {
+      color: var(--color-white);
+    }
+    .weapon-wheel {
+      width: 100%;
+      height: auto;
+      transform: rotate(22deg);
+
+      > text {
+        font-weight: 700;
+        font-size: 1.5em;
+        stroke: black;
+      }
+
+      .weapon {
+        path {
+          stroke: rgba(0, 0, 0, 0.3);
+          stroke-width: 5px;
+          stroke-dasharray: 235.5 440;
+          transform-origin: center center;
+          transform: scale(0.98);
+          transform-box: fill-box;
+        }
+
+        text,
+        image {
+          font-weight: 700;
+          stroke: black;
+          transform: rotate(-22deg);
+        }
+        &:hover {
+          cursor: pointer;
+
+          path {
+            fill: white;
+            transition: all 0.2s ease-in-out;
+            stroke-width: 0;
+          }
+        }
+      }
+
+      .active-weapon path {
+        stroke: rgba(82, 149, 177, 1);
+        stroke-width: 10px;
+        stroke-dasharray: 235.5 440;
+      }
+    }
+  }
 }
 
-.weapon-wheel > text {
-  font-weight: 700;
-  font-size: 1.5em;
-  stroke: black;
-}
-
-.weapon-wheel text,
-.weapon-wheel .weapon text,
-.weapon-wheel .weapon image {
-  transform: rotate(-22deg);
-}
-
-.weapon-wheel .weapon path {
-  stroke: rgba(0, 0, 0, 0.3);
-  stroke-width: 5px;
-  stroke-dasharray: 235.5 440;
-  transform-origin: center center;
-  transform: scale(0.98);
-  transform-box: fill-box;
-}
-
-.weapon-wheel .weapon text {
-  font-weight: 700;
-  stroke: black;
-}
-
-.weapon-wheel .weapon.active-weapon path {
-  stroke: rgba(82, 149, 177, 1);
-  stroke-width: 10px;
-  stroke-dasharray: 235.5 440;
-}
 
 .weapon-wheel .weapon:hover {
   cursor: pointer;
@@ -335,5 +362,26 @@ body {
   fill: white;
   transition: all 0.2s ease-in-out;
   stroke-width: 0;
+}
+
+
+/* scroll */
+.scroll-btn {
+  position: absolute;           
+  bottom: 50px;            
+  right: 50px;              
+  background-color: #ffffff; 
+  border-radius: 50%;       
+  padding: 10px;             
+  cursor: pointer;     
+}
+
+.scroll-arrow-svg {
+  width: 40px;              
+  height: 40px;             
+}               
+
+.scroll-btn:hover {
+  background-color: #f1f1f1;
 }
 
