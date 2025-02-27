@@ -262,16 +262,17 @@ button{
       .cta-button {
         display: inline-block;
         padding: 0.75rem 1.5rem;
-        background-color: var(--color-blue);
+        background-color:var(--logo-button-color);
         color: var(--color-white);
+        border: none;
         text-decoration: none;
         border-radius: 5px;
         font-size: 1rem;
-        transition: background-color 0.3s ease;
-        color: var(--secondary-bacground-color);
+        transition: var(--accent-background-color) 0.3s ease, color 0.3s ease;
+        color: var(--secondary-text-color);
 
         &:hover {
-          background-color: var(--logo-button-color);
+          background-color: var(--primary-background-color);
         }
       }
     }
@@ -304,7 +305,11 @@ button{
     margin: 50px auto;
 
     .squad-selector-title {
-      color: var(--color-white);
+      color:var(--secondary-text-color);
+      font-family: var(--pricedown);
+      font-size: 3em;
+      font-weight: bold;
+      text-align: center;
     }
     .weapon-wheel {
       width: 100%;
@@ -399,3 +404,5 @@ button{
 #username{
   margin-top: 1em;
 }
+
+
