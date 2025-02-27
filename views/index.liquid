@@ -9,11 +9,11 @@
  image1: "images/branco.png"
  image1_alt: "Branco"
   ,
- image2: "images/saif.png"
- image2_alt: "Saif"
+ image2: "images/fatima.png"
+ image2_alt: "Fatima"
   ,
- image3: "images/fatima.png"
- image3_alt: "Fatima"
+ image3: "images/saif.png"
+ image3_alt: "Saif"
   ,
  title: "Team Storm"
  description: "Wij zijn een gepassioneerd team van designers en developers die samenwerken om geweldige projecten te realiseren."
@@ -21,6 +21,8 @@
  button_url: "#"
 %}
 
-{% include "partials/squad-selector.liquid" %}
+{% include "partials/squad-selector.liquid"
+  , title: "Choose your squad"
+%}
 
 {% render 'partials/foot.liquid' %}
