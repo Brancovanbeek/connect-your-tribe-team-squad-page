@@ -4,17 +4,17 @@
     font-style: normal;
     font-weight: normal;
     src: url("../fonts/Chalet.otf") format("opentype");
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: "Pricedown";
     font-style: normal;
     font-weight: normal;
     src: url("../fonts/Pricedown.otf") format("opentype");
-  }
-  
-  /* Background Styling */
-  body {
+}
+
+/* Background Styling */
+body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -22,115 +22,131 @@
     background: linear-gradient(135deg, var(--primary-background-color), var(--secundary-background-color), var(--accent-background-color));
     text-align: center;
     color: white;
-  
-    /* Body text */
+
+    /* Font Variables */
     --chalet: "Chalet";
     --pricedown: "Pricedown";
     --antonio: "Antonio";
     --open-sans: "Open Sans";
-  
-    /* Font sizes*/
+
+    /* Font Sizes */
     --font-size-xl: 3em;
     --font-size-l: 2em;
     --font-size-m: 1em;
     --font-size-s: 0.875em;
-  
-    /* Font weight*/
+
+    /* Font Weight */
     --light: 400;
     --normal: 500;
     --bold: 600;
-  
+
     /* Primary Colors */
-    --primary-background-color:#000000 ;
+    --primary-background-color: #000000;
     --primary-text-color: #000000;
-    --logo-button-color:#FFAB00; 
-  
-    /* Secundary Colors */
+    --logo-button-color: #FFAB00;
+
+    /* Secondary Colors */
     --secundary-background-color: #4c466a;
-    --secondary-bacground-color: #FFFFFF;
     --secondary-text-color: #FFFFFF;
-  
+
     /* Accent Colors */
     --accent-background-color: #db9a54;
-  }
+}
 
-.character-search > input{
+/* Character Search Input */
+.character-search input {
     border-radius: 5px;
     border: none;
     height: 20px;
-
 }
 
+/* Character Grid */
 .character-card-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 columns per row */
-    grid-template-rows: repeat(2, auto); /* 2 rows */
-    gap: 40px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 50px;
     margin: auto;
-    padding: 20px; /*gradiant columns */
+    padding: 50px;
     justify-content: center;
 }
 
-.character-card-flip {
-    border: none;
+/* Flip Card Container */
+}
+
+/* Flip Card Front & Back */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color:var(--accent-background-color);
-    padding:10px;
+    justify-content: center;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px var(--primary-background-color);
 }
 
-.profile-photo {
-    width: 100%;  
-    max-width: 180px; 
-    height: auto; 
-    border-radius: 5px; 
-}
-/* 
-.flip-card-front, .flip-card-back {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Front Side */
 }
 
+/* Back Side */
 .flip-card-back {
-    display: none;
+    background: var(--secundary-background-color);
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.character-card-flip:hover .flip-card-back {
-    display: block;
-} */
-/* Responsive */
+/* Flip Effect */
+
+
+/* Profile Photo */
+.profile-photo {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 220px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+
+/* Responsive Grid */
 @media (max-width: 1024px) {
     .character-card-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
-        grid-template-rows: auto;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     .character-card-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 480px) {
     .character-card-grid {
-        grid-template-columns: 1fr; /* 1 column for very small screens */
+        grid-template-columns: 1fr;
     }
 }
 
-/* .character-card-flip:hover {
-    transform: scale(1.05);
-    cursor:pointer;
-} */
-
+/* Headings & Links */
 h1, h2, a {
     font-family: 'Pricedown';
-    color: var(--secondary-text-color)
+    color: var(--secondary-text-color);
+}
+
+h1 {
+    margin: 50px;
+    font-size: 3.5em;
+}
+
+h2 {
+    color: var(--primary-background-color);
+    text-shadow: 1px 1px 1px var(--secondary-text-color);
 }
 
 a {
