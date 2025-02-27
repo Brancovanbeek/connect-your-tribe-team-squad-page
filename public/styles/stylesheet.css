@@ -231,12 +231,15 @@ body {
       }
 
       h1 {
-        font-size: 1.75rem;
+        font-family: var(--pricedown);
+        color: var(--secondary-bacground-color);
+        font-size: 3rem;
         margin-bottom: 1rem;
       }
       p {
         font-size: 1rem;
         margin-bottom: 1.5rem;
+        color: var(--accent-background-color);
       }
       .cta-button {
         display: inline-block;
@@ -247,9 +250,10 @@ body {
         border-radius: 5px;
         font-size: 1rem;
         transition: background-color 0.3s ease;
+        color: var(--secondary-bacground-color);
 
         &:hover {
-          background-color: #0056b3;
+          background-color: var(--logo-button-color);
         }
       }
     }
