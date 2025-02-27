@@ -31,6 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+      event.preventDefault(); // Blokkeert Enter volledig
+  }
+});
+
 
 
 
