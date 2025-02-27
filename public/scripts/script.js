@@ -1,6 +1,6 @@
 function filterMembers() {
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
-    const memberItems = document.querySelectorAll('.member-item');
+    const memberItems = document.querySelectorAll('.flipcard');
 
     memberItems.forEach(item => {
       const name = item.textContent.toLowerCase();
