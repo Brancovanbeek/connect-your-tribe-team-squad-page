@@ -22,6 +22,10 @@ body {
     background: linear-gradient(135deg, var(--primary-background-color), var(--secundary-background-color), var(--accent-background-color));
     text-align: center;
     color: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Zorgt ervoor dat de achtergrond blijft staan */
+    background-size: cover; /* Past de gradient aan het volledige scherm aan */
+ 
 
     /* Font Variables */
     --chalet: "Chalet";
