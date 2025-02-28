@@ -1,6 +1,4 @@
-### TEAM STORM website: 
-
-
+### TEAM STORM website: https://connect-your-tribe-team-squad-page-vkz4.onrender.com/
 
 
 ### Lijst van commits per persoon  
