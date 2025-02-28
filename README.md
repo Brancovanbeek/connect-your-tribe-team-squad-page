@@ -1,4 +1,5 @@
 ### TEAM STORM website: https://connect-your-tribe-team-squad-page-vkz4.onrender.com/
+<img width="692" alt="Screenshot 2025-02-28 at 13 05 34" src="https://github.com/user-attachments/assets/1e430f01-81ea-4962-9b36-e33fab4c6475" />
 
 
 ### Lijst van commits per persoon  
