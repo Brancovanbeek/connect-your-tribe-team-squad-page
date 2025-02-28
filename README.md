@@ -1,33 +1,45 @@
-# Squad page
+### Lijst van commits per persoon  
 
-Ontwerp en maak met een team een website met NodeJS en JSON.
+#### **Saif8599**  
+- **Feb 24, 2025:** `feat: add project setup`  
+- **Feb 26, 2025:**  
+  - `feat(ui): add squad selector with styling #5`  
+  - `feat(ui): add a tag with href link #5`  
+  - `refactor(css): nesting css`  
+  - `chore(html): change title`  
+  - `chore: clean code`  
+- **Feb 27, 2025:**  
+  - `fix(js): filterMembers function #12`  
+  - `feat(route): add tribe route for all members #14`  
+  - `feat(template): add title parameter to squad selector`  
+  - `style(ui): add hover effect for hero-img`  
+  - `Merge branch 'main' of https://github.com/Brancovanbeek/connect-your-…`  
 
-De instructie vind je in: [INSTRUCTIONS](https://github.com/fdnd-task/connect-your-tribe-squad-page/blob/main/docs/INSTRUCTIONS.md)
+#### **Brancovanbeek**  
+- **Feb 24, 2025:** `feat: html basis, #3`  
+- **Feb 25, 2025:** `refactor(structure): moved files to correct directories, #3`  
+- **Feb 26, 2025:**  
+  - `fix(squad): rename person to persons to fix rendering issue, #3`  
+  - `feat: add scroll-to-top button and scroll-to-bottom link with smooth …`  
+  - `fix: corrupted files`  
+  - `fix: bugs in stylesheet.css`  
+- **Feb 27, 2025:**  
+  - `fix: prevent card flip when clicking on input field`  
+  - `feat: make scroll navigation responsive, closes #16`  
+  - `fix: scroll navigation issue, #15`  
+  - `feat: username input will stay visible, closes #17`  
 
-## Inhoudsopgave Squad page
-
-  * [Beschrijving](#beschrijving)
-  * [Kenmerken](#kenmerken)
-  * [Installatie](#installatie)
-  * [Gebruik](#gebruik)
-  * [Bronnen](#bronnen)
-  * [Licentie](#licentie)
-
-## Beschrijving
-<!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
-
-## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
-
-## Installatie
-<!-- Bij Installatie staat stap-voor-stap beschreven hoe je de development omgeving moet inrichten om aan de repository te kunnen werken. -->
-
-## Gebruik
-
-## Bronnen
-
-## Licentie
-
-This project is licensed under the terms of the [MIT license](./LICENSE).
+#### **FatimaZelay**  
+- **Feb 25, 2025:** `Css styling #4`  
+- **Feb 27, 2025:**  
+  - `feat: Adjustment of color contrast #4`  
+  - `feat: added styling of the squad pages & flip #4`  
+  - `feat: Css en Javascript voor de flipcard #2`  
+  - `Recommit`  
+  - `Feat: Flipcard Javascript #2`  
+  - `Fix: Logo Design #7`  
+  - `fix: Gradient fix, no repetition when searching for random name #4`  
+  - `Merge branch 'main' of https://github.com/Brancovanbeek/connect-your-…`  
+  - `feat: added new styling features the class skills #4`  
+  - `feat: Adjustments of font and button color #4`  
+  - `Merge branch 'main' of https://github.com/Brancovanbeek/connect-your-…`  
